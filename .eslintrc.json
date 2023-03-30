@@ -1,0 +1,6 @@
+{
+  "extends": "@rocketseat/eslint-config/react",
+  "rules": {
+    "eslint-disable-next-line prettier/prettier": "true"
+  }
+}
