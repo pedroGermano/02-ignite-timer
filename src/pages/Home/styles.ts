@@ -31,8 +31,13 @@ export const StartCountdownButton = styled.button`
   border-radius: 0.5rem;
   cursor: pointer;
 
-  &:hover {
-    filter: brightness(0.7);
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+
+  &:not(:disabled):hover {
+    background: ${(props) => props.theme["green-700"]};
   }
 `;
 
@@ -47,6 +52,18 @@ export const FormContainer = styled.div`
   font-weight: bold;
   flex-wrap: wrap;
 `;
+
+const BaseInput = styled.input`
+  background: transparent;
+  height: 2.5rem;
+  border-bottom: 2px solid ${(props) => props.theme["gray-500"]};
+  font-weight: bold;
+  font-size: 1.125rem;
+`;
+
+export const TaskInput = styled(BaseInput)``;
+export const MinutesAmountInput = styled(BaseInput)``;
+
 export const CountdownContainer = styled.div`
   font-family: "Roboto Mono", monospace;
   font-size: 10rem;
