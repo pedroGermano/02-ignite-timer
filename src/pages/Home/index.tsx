@@ -57,6 +57,7 @@ export function Home() {
     setCycles(state => [...state, newCycle])
     setActiveCycleId(id)
     reset();
+    reset();
   }
 
   const activeCycle = cycles.find(cycle => cycle.id === activeCycleId)
